@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+*{margin: 0; color: #fff;}
+
+.center, .left, .right {
+	background: url(./images/hero_img.png) no-repeat center/cover;
+	height: 420px;
+	padding: 30px;
+}
+
+.left{margin: 15px 0;}
+
+h2{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
+	text-transform: capitalize;
+	font-size: 46px;
+	margin: auto;
+}
+
+button {
+	background-color: #57AD68;
+	width: 213px;
+	height: 57px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	border-radius: 30px;
+	text-transform: uppercase;
+	font-size: 20px;
+	border: 1px solid #57AD68;
+}
+
+button:hover{
+	color: #57AD68;
+	background-color: #fff;
+	border: 1px solid #fff
+}
+
+p{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	max-width: 779px;
+	padding: 10px 0;
+	line-height: 30px;
+	margin: 0;
+	font-size: 24px;
+}
+
+.left p, .right p {
+	max-width: 36rem;
+	text-align: left;
+}
+
+.center .centerDiv {width:60%;}
+.centerDiv {
+	transform: translateY(50%);
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+.left .centerDiv {float: left;}
+.right .centerDiv {float: right;}
+
+.center h2, .center p, .center button{
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+@media(max-width: 850px){.centerDiv {transform: translateY(35%);}
+
+@media(max-width: 500px){
+	h2, p, button {
+		color: #fff;
+		text-align: center;
+		display: block;
+		margin: auto;
+	}
+	.centerDiv, .center .centerDiv{width: 78%; transform: translateY(60%);}
+	.left .centerDiv, .right .centerDiv{float: none;}
+	.left p, .right p {text-align: center;}
+	.center, .left, .right{
+		background-position-x: -90rem;
+		height: -webkit-fill-available;
+	}
+	h4{font-size: 36px;}
+	p{font-size: 18px; padding: 20px 0;}
+}
+
+@media(max-width: 340px){
+	.center, .left, .right {background-position-x: -69rem;}
+	.centerDiv, .center .centerDiv {width: 100%; transform: translateY(35%);}
+}
